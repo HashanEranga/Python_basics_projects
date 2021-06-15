@@ -15,3 +15,20 @@ def cant__wait():
 
     txt.set(timeLeft)
     root.after(1000, cant__wait)
+
+root = Tk()
+
+root.attributes("-fullscreen", True)
+root.configure(background = 'black')
+root.bind("x", quit)
+root.after(1000, cant__wait)
+
+endTime = datetime.datetime(2021, 7, 1, 0, 0)
+
+fnt = font.Font(family = 'Helvetica', size = 90, weight = 'bold')
+txt = StringVar()
+
+lbl = ttk.Label(root, textvariable = txt, font = fnt, foreground = 'white', background = 'black')
+lbl.place(relx = 0.5, rely = 0.5, anchor = CENTER)
+
+root.mainloop()
